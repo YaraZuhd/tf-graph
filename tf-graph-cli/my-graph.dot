@@ -1,0 +1,12 @@
+digraph tf_graph {
+  rankdir=LR;
+  bgcolor="#1e1e1e";
+  pad="0.3";
+  node [shape=box, style="rounded,filled", fontname="Helvetica", fontcolor="#ffffff", color="#666666", fillcolor="#2d2d2d", margin="0.2,0.15"];
+  edge [color="#888888", fontcolor="#cccccc", fontname="Helvetica"];
+
+  "cloudflare_workers_kv_namespace.tf_graph_kv" [label="tf_graph_kv\n(cloudflare_workers_kv_namespace)"];
+  "cloudflare_workers_script.tf_graph_worker" [label="tf_graph_worker\n(cloudflare_workers_script)"];
+
+  "cloudflare_workers_script.tf_graph_worker" -> "cloudflare_workers_kv_namespace.tf_graph_kv";
+}
